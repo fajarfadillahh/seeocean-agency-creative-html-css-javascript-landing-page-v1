@@ -45,6 +45,29 @@
 html {
   height: 100%;
   scroll-behavior: smooth;
+
+  // dark mode
+  &.dark {
+    --title-color: #fff;
+    --text-color: #fff;
+    --container-color: #02041f;
+
+    body {
+      background-color: var(--container-color);
+    }
+
+    .home__form {
+      &-input {
+        background-color: #0d0f3b;
+        border-color: transparent;
+        color: #fff;
+
+        &::placeholder {
+          color: #fff;
+        }
+      }
+    }
+  }
 }
 
 body {
@@ -103,7 +126,7 @@ img {
 
   &-fill {
     background-color: var(--red-color);
-    color: var(--container-color);
+    color: #fff;
   }
 
   &-outline {
@@ -114,7 +137,7 @@ img {
     &:hover {
       background-color: var(--red-color);
       border-color: var(--red-color);
-      color: var(--container-color);
+      color: #fff;
     }
   }
 }
@@ -248,12 +271,12 @@ img {
       text-align: center;
       font-size: 15px;
       font-weight: var(--font-bold);
-      color: var(--title-color);
+      color: #02041f;
 
       &::placeholder {
         font-size: 15px;
         font-weight: var(--font-reguler);
-        color: var(--text-color);
+        color: #626268;
       }
     }
   }
@@ -288,7 +311,6 @@ img {
 // ===== ::SELECTION =====
 ::selection {
   background-color: var(--red-color);
-  color: var(--container-color);
 }
 
 // ===== ::-WEBKIT-SCROLLBAR =====
