@@ -330,6 +330,10 @@ img {
 
 // width 768px
 @media screen and (min-width: 768px) {
+  .section-title {
+    font-size: 36px;
+  }
+
   .header {
     &__container {
       position: relative;
