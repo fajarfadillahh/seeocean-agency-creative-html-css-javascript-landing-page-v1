@@ -285,6 +285,12 @@ img {
   }
 }
 
+// ===== ::SELECTION =====
+::selection {
+  background-color: var(--red-color);
+  color: var(--container-color);
+}
+
 // ===== MEDIA QUERIES =====
 // width 480px
 @media screen and (min-width: 480px) {
@@ -311,7 +317,7 @@ img {
       align-items: center;
 
       &-input {
-        padding-left: 1.5rem;
+        padding: 0 1.5rem;
         text-align: left;
       }
     }
@@ -350,6 +356,7 @@ img {
       left: 50%;
       transform: translateX(-50%);
       flex-direction: row;
+      gap: 2rem;
     }
 
     &__button {
