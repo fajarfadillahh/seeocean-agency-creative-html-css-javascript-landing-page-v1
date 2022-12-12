@@ -106,18 +106,112 @@ img {
     color: var(--container-color);
   }
 
-  &-ouline {
+  &-outline {
     border: 2px solid var(--red-color);
     color: var(--red-color);
+    transition: var(--transition-all);
+
+    &:hover {
+      background-color: var(--red-color);
+      border-color: var(--red-color);
+      color: var(--container-color);
+    }
   }
 }
 
 .container {
   max-width: 1120px;
-  width: (100% - 3rem);
+  width: calc(100% - 3rem);
   margin: 0 auto;
 }
 
 .main {
   overflow: hidden;
+}
+
+// ===== HEADER SECTION =====
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--container-color);
+  z-index: var(--z-fixed);
+  transition: var(--transition-all);
+
+  &__container {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-title);
+    font-size: 22px;
+    font-weight: var(--font-reguler);
+    color: var(--title-color);
+
+    &-icon {
+      width: 40px;
+    }
+  }
+
+  &__menu {
+    @media screen and (max-width: 768px) {
+      position: fixed;
+      width: 100%;
+      top: var(--header-height);
+      left: 0;
+      text-align: center;
+      padding: 2rem 4rem;
+      background-color: var(--container-color);
+      transition: var(--transition-all);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+    }
+
+    // show menu
+    &.show-menu {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__link {
+    font-size: 15px;
+    color: var(--text-color);
+
+    &:hover {
+      color: var(--red-color);
+    }
+  }
+
+  &__theme {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  &__button {
+    margin-top: 1.5rem;
+  }
+
+  &__toggle {
+    display: inline-flex;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+  }
 }
