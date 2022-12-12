@@ -365,3 +365,35 @@ img {
     }
   }
 }
+
+// width 968px
+@media screen and (min-width: 968px) {
+  .section-title {
+    font-size: 42px;
+  }
+
+  .home {
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+
+    &__data,
+    &__img {
+      width: auto;
+    }
+
+    &__data {
+      text-align: left;
+      justify-self: flex-start;
+    }
+
+    &__form {
+      margin: 0;
+    }
+
+    &__sponsored {
+      justify-content: flex-start;
+    }
+  }
+}
