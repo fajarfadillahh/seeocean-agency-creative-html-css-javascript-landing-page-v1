@@ -73,6 +73,7 @@ html {
 body {
   font-family: var(--font-text);
   font-weight: var(--font-reguler);
+  transition: var(--transition-all);
 }
 
 ul,
@@ -272,6 +273,7 @@ img {
       font-size: 15px;
       font-weight: var(--font-bold);
       color: #02041f;
+      transition: var(--transition-all);
 
       &::placeholder {
         font-size: 15px;
